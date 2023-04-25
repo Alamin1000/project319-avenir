@@ -14,6 +14,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   background-color: #fff;
+  color: #0B203F;
   overflow-x: hidden;
   word-wrap: break-word;
   word-break: normal;
@@ -284,13 +285,25 @@ p:last-child{
   z-index: 10;
 }
 
+.hero-section::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
 .hero__bg__slider {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: -1;
+  z-index: -2;
   display: flex !important;
   flex-direction: column;
 }
@@ -352,6 +365,61 @@ p:last-child{
 
 }
 /* ---hero-section---end */
+
+/* ---tile-hero-section--- */
+.title-hero-section {
+  padding: 188px 0 40px;
+  color: #fff;
+  position: relative;
+  z-index: 10;
+}
+
+.title-hero-section::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+.title-hero__inner {
+
+}
+.title-hero__inner .h1 {
+  font-size: 50px;
+  font-weight: 500;
+  text-align: center;
+}
+/* ---tile-hero-section---end */
+
+
+/* ---txt-section--- */
+.txt-section {
+  padding: 55px 0;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.txt-section__inner {
+
+}
+.txt-section__content {
+  max-width: 790px;
+  margin: 0 auto;
+}
+.txt-section__content p {
+  font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  text-align: center;
+  font-family: var(--cairo);
+}
+.txt-section__content p:last-child {
+  margin-bottom: 0;
+}
+/* ---txt-section---end */
 
 
 /* ---common--- */
@@ -538,3 +606,148 @@ p:last-child{
 }
 
 /* ---footer-section---end */
+
+
+/* ---faq-section--- */
+.faq-section {
+  padding: 60px 0 110px;
+}
+.faq-section__inner {
+
+}
+.faq-section__title {
+  margin: 0 0 50px;
+}
+
+.faqs_wrapper {
+  border-bottom: 2px solid #EAEAEA;
+}
+.single-faq {
+  border-top: 2px solid #EAEAEA;
+}
+.single-faq__title {
+  padding: 24px 62px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.single-faq__title .icon {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+}
+.single-faq__title .icon .img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.single-faq__title h3 {
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--theme__color1);
+}
+.single-faq__title .ind {
+  margin-left: auto;
+  font-size: 24px;
+  color: var(--theme__color1);
+  transition: 0.3s;
+}
+.single-faq__title:not(.collapsed) .ind {
+  transform: rotate(180deg);
+}
+.single-faq__body {
+
+}
+.single-faq__body__inner {
+  padding: 0 160px 45px 195px;
+}
+.single-faq__body__inner p {
+  font-weight: 500;
+  /* margin-bottom: px; */
+  line-height: 1.4;
+  font-family: var(--cairo);
+}
+/* ---faq-section---end */
+
+
+/* ---elected-section--- */
+.elected-section {
+  background: #F4F5F9;
+  padding: 50px 0 115px;
+}
+.elected-section__inner {
+
+}
+.elected-section__title {
+  text-align: center;
+  max-width: 740px;
+  margin: 0 auto;
+  margin-bottom: 53px;
+}
+.elected-section__title h5 {
+  font-size: 16px;
+  margin: 0 0 40px;
+  line-height: 1.4;
+  font-weight: 500;
+  font-family: var(--cairo);
+}
+.elected-section__title h4 {
+  font-size: 19px;
+  font-weight: 500;
+  font-family: var(--cairo);
+}
+
+.elected-members_wrap {
+  gap: 14px;
+  display: flex;
+  flex-direction: column;
+}
+.elected-member {
+	padding: 35px 75px 28px 74px;
+	gap: 30px;
+	background: #fff;
+	border-radius: 12px;
+	display: flex;
+}
+.elected-member__image {
+  width: 180px;
+  border-bottom: 3px solid #1364E5;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+.elected-member__image .img {
+
+}
+.elected-member__tc {
+  padding: 15px 0;
+}
+.elected-member__tc__ttl {
+  margin: 0 0 23px;
+}
+.elected-member__tc__ttl h3 {
+  font-size: 27.88px;
+  margin: 0 0 6px;
+  font-weight: 500;
+  color: var(--theme__color1);
+}
+.elected-member__tc__ttl .bdg {
+  font-size: 15.18px;
+  font-weight: 500;
+  line-height: 1.1;
+  border-radius: 4px;
+  padding: 3px 12px 5px;
+  background: #002C6D;
+  color: #fff;
+  display: inline-block;
+}
+.elected-member__tc__bd {
+
+}
+.elected-member__tc__bd p {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--cairo);
+  line-height: 1.21;
+}
+/* ---elected-section---end */
