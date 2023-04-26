@@ -283,6 +283,9 @@ p:last-child{
   padding: 220px 0;
   position: relative;
   z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .hero-section::after {
@@ -293,7 +296,7 @@ p:last-child{
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(68, 118, 255, 0.26);
   z-index: -1;
 }
 
@@ -382,7 +385,7 @@ p:last-child{
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(68, 118, 255, 0.26);
   z-index: -1;
 }
 .title-hero__inner {
@@ -709,6 +712,7 @@ p:last-child{
 	background: #fff;
 	border-radius: 12px;
 	display: flex;
+  align-items: flex-start;
 }
 .elected-member__image {
   width: 180px;
